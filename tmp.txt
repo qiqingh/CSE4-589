@@ -1,0 +1,21 @@
+
+wget --no-check-certificate https://ubwins.cse.buffalo.edu/cse-489_589/assignment1_package.sh
+
+wget --no-check-certificate https://ubwins.cse.buffalo.edu/cse-489_589/assignment1_update_grader.sh
+
+wget --no-check-certificate https://ubwins.cse.buffalo.edu/cse-489_589/assignment1_template_${lang_option}.tar
+
+wget --no-check-certificate -r --no-parent -nH --cut-dirs=3 -R index.html* https://ubwins.cse.buffalo.edu/cse-489_589/grader/
+
+
+
+
+##############################################################
+
+wget --no-check-certificate https://raw.githubusercontent.com/qiqingh/test/main/assignment1_package.sh
+
+
+wget --no-check-certificate https://raw.githubusercontent.com/qiqingh/test/main/assignment1_update_grader.sh
+
+
+https://github.com/qiqingh/test
