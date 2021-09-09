@@ -18,4 +18,12 @@ wget --no-check-certificate https://raw.githubusercontent.com/qiqingh/test/main/
 wget --no-check-certificate https://raw.githubusercontent.com/qiqingh/test/main/assignment1_update_grader.sh
 
 
+wget --no-check-certificate https://github.com/qiqingh/test/blob/main/assignment1_template_${lang_option}.tar
+
+
+wget --no-check-certificate -r -c https://github.com/qiqingh/test/raw/main/grader_controller -O grader_controller
+
+
+
+
 https://github.com/qiqingh/test
