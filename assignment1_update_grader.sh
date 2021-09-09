@@ -7,5 +7,4 @@
 #====================================================================================
 
 cd grader
-wget --no-check-certificate -r --no-parent -nH --cut-dirs=3 -R index.html https://ubwins.cse.buffalo.edu/cse-489_589/grader/
-cd ..
+wget --no-check-certificate -r -c https://github.com/qiqingh/test/raw/main/grader_controller -O grader_controller
