@@ -106,6 +106,7 @@ if ask "Do you want to continue?" Y; then
     cd grader
     wget --no-check-certificate -r -c https://github.com/qiqingh/CSE4-589/raw/main/grader_controller -O grader_controller
 
+    wget --no-check-certificate https://raw.githubusercontent.com/qiqingh/CSE4-589/main/grader.cfg
 
 
 
