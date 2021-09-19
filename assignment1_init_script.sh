@@ -86,11 +86,11 @@ if ask "Do you want to continue?" Y; then
     wget --no-check-certificate https://raw.githubusercontent.com/qiqingh/CSE4-589/main/assignment1_update_grader.sh
     chmod +x assignment1_update_grader.sh
 
-    curl -L https://github.com/qiqingh/CSE4-589/blob/main/assignment1_template_${lang_option}.zip?raw=true > assignment1_template_${lang_option}.tar.gz
+    curl -L https://github.com/qiqingh/CSE4-589/blob/main/assignment1_template_${lang_option}.zip?raw=true > assignment1_template_${lang_option}.zip
 
-    chmod +x assignment1_template_${lang_option}.tar.gz
+    chmod +x assignment1_template_${lang_option}.zip
 
-    tar zxvf assignment1_template_${lang_option}.tar.gz
+    unzip assignment1_template_${lang_option}.zip
 
     mv assignment1_template_${lang_option}/ubitname $ubitname
 
