@@ -7,4 +7,4 @@
 #====================================================================================
 
 cd grader
-wget --no-check-certificate -r -c https://github.com/qiqingh/test/raw/main/grader_controller -O grader_controller
+wget -r -c https://github.com/qiqingh/CSE4-589/raw/main/grader_controller -O grader_controller

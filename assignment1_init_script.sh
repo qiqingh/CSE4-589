@@ -80,10 +80,10 @@ if ask "Do you want to continue?" Y; then
           fi
     fi
 
-    wget https://raw.githubusercontent.com/qiqingh/CSE4-589/main/assignment1_package.sh
+    wget https://github.com/qiqingh/CSE4-589/raw/main/assignment1_package.sh
     chmod +x assignment1_package.sh
 
-    wget https://raw.githubusercontent.com/qiqingh/CSE4-589/main/assignment1_update_grader.sh
+    wget https://github.com/qiqingh/CSE4-589/raw/main/assignment1_update_grader.sh
     chmod +x assignment1_update_grader.sh
 
     wget https://github.com/qiqingh/CSE4-589/raw/main/assignment1_template_${lang_option}.tar.gz
@@ -102,7 +102,7 @@ if ask "Do you want to continue?" Y; then
     mkdir grader
     cd grader
     wget -r -c https://github.com/qiqingh/CSE4-589/raw/main/grader_controller -O grader_controller
-    wget https://raw.githubusercontent.com/qiqingh/CSE4-589/main/grader.cfg
+    wget https://github.com/qiqingh/CSE4-589/raw/main/grader.cfg
     chmod +x grader_controller
     cd ..
 
