@@ -3,7 +3,7 @@
 #Title           :assignment1_init_script.sh
 #description     :This script will download and install the template for assignment1.
 #Author          :Swetank Kumar Saha <swetankk@buffalo.edu>
-#Version         :1.1
+#Version         :1.2
 #====================================================================================
 
 # https://gist.github.com/davejamesmiller/1965569
@@ -80,21 +80,16 @@ if ask "Do you want to continue?" Y; then
           fi
     fi
 
-    wget --no-check-certificate https://raw.githubusercontent.com/qiqingh/CSE4-589/main/assignment1_package.sh
+    wget https://raw.githubusercontent.com/qiqingh/CSE4-589/main/assignment1_package.sh
     chmod +x assignment1_package.sh
 
-    wget --no-check-certificate https://raw.githubusercontent.com/qiqingh/CSE4-589/main/assignment1_update_grader.sh
+    wget https://raw.githubusercontent.com/qiqingh/CSE4-589/main/assignment1_update_grader.sh
     chmod +x assignment1_update_grader.sh
 
-    # curl -L https://github.com/qiqingh/CSE4-589/blob/main/assignment1_template_${lang_option}.zip?raw=true > assignment1_template_${lang_option}.zip
-
-    wget --no-check-certificate https://github.com/qiqingh/CSE4-589/raw/main/assignment1_template_${lang_option}.tar.gz
-
-    chmod +x assignment1_template_${lang_option}.tar.gz
-
-    tar zxvf assignment1_template_${lang_option}.tar.gz
+    wget https://github.com/qiqingh/CSE4-589/raw/main/assignment1_template_${lang_option}.tar.gz
+    tar --strip-components=1 -xvf assignment1_template_${lang_option}.tar.gz
     
-    mv assignment1_template_${lang_option}/ubitname $ubitname
+    mv ./ubitname $ubitname
 
     sed -i "s/ubitname/$ubitname/g" ./$ubitname/Makefile
 
@@ -106,12 +101,8 @@ if ask "Do you want to continue?" Y; then
 
     mkdir grader
     cd grader
-    wget --no-check-certificate -r -c https://github.com/qiqingh/CSE4-589/raw/main/grader_controller -O grader_controller
-
-    wget --no-check-certificate https://raw.githubusercontent.com/qiqingh/CSE4-589/main/grader.cfg
-
-
-
+    wget -r -c https://github.com/qiqingh/CSE4-589/raw/main/grader_controller -O grader_controller
+    wget https://raw.githubusercontent.com/qiqingh/CSE4-589/main/grader.cfg
     chmod +x grader_controller
     cd ..
 
