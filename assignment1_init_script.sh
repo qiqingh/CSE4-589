@@ -97,7 +97,7 @@ if ask "Do you want to continue?" Y; then
     sed -i "s/ubitname/$ubitname/g" ./$ubitname/src/${ubitname}_assignment1.${lang_option}
     sed -i "s/Fullname/$fullname/g" ./$ubitname/src/${ubitname}_assignment1.${lang_option}
 
-    rm assignment1_template_${lang_option}.tar
+    rm assignment1_template_${lang_option}.tar.gz
 
     mkdir grader
     cd grader
