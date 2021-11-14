@@ -66,14 +66,14 @@ echo "UBIT username: $ubitname"
 echo "Programming language: $language"
 
 if ask "Do you want to continue?" Y; then
-	wget --no-check-certificate https://host/remotepath/assignment2_package.sh
+	wget --no-check-certificate https://raw.githubusercontent.com/qiqingh/CSE4-589/main/PA2/assignment2_package.sh
 	chmod +x assignment2_package.sh
 
-	wget --no-check-certificate https://host/remotepath/assignment2_update_grader.sh
+	wget --no-check-certificate https://raw.githubusercontent.com/qiqingh/CSE4-589/main/PA2/assignment2_update_grader.sh
 	chmod +x assignment2_update_grader.sh
 
-	wget --no-check-certificate https://host/remotepath/assignment2_template_${lang_option}.tar
-	tar -xvf assignment2_template_${lang_option}.tar
+	wget --no-check-certificate https://raw.githubusercontent.com/qiqingh/CSE4-589/main/PA2/assignment2_template_${lang_option}.tar.gz
+	tar -xvf assignment2_template_${lang_option}.tar.gz
 
 	mv ./ubitname $ubitname
 
@@ -81,7 +81,8 @@ if ask "Do you want to continue?" Y; then
 
 	mkdir grader
 	cd grader
-	wget --no-check-certificate -r --no-parent -nH --cut-dirs=3 -R index.html https://host/remotepath/grader/
+	# wget --no-check-certificate -r --no-parent -nH --cut-dirs=3 -R index.html https://host/remotepath/grader/
+	wget 
 	chmod +x run_experiments
 	chmod +x sanity_tests
 	chmod +x basic_tests
