@@ -3,7 +3,7 @@
 #Title           :assignment2_init_script.sh
 #description     :This script will download and install the template for assignment2.
 #Author		     :Swetank Kumar Saha <swetankk@buffalo.edu>
-#Version         :1.1
+#Version         :1.2
 #====================================================================================
 
 # https://gist.github.com/davejamesmiller/1965569
@@ -81,8 +81,10 @@ if ask "Do you want to continue?" Y; then
 
 	mkdir grader
 	cd grader
-	# wget --no-check-certificate -r --no-parent -nH --cut-dirs=3 -R index.html https://host/remotepath/grader/
-	wget 
+	wget https://raw.githubusercontent.com/qiqingh/CSE4-589/main/PA2/grader/run_experiments -O run_experiments
+	wget https://raw.githubusercontent.com/qiqingh/CSE4-589/main/PA2/grader/sanity_tests -O sanity_tests
+	wget https://raw.githubusercontent.com/qiqingh/CSE4-589/main/PA2/grader/basic_tests -O basic_tests
+	wget https://raw.githubusercontent.com/qiqingh/CSE4-589/main/PA2/grader/advanced_tests -O advanced_tests
 	chmod +x run_experiments
 	chmod +x sanity_tests
 	chmod +x basic_tests
