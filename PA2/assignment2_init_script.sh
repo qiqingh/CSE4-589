@@ -77,7 +77,7 @@ if ask "Do you want to continue?" Y; then
 
 	mv ./ubitname $ubitname
 
-	rm assignment2_template_${lang_option}.tar
+	rm assignment2_template_${lang_option}.tar.gz
 
 	mkdir grader
 	cd grader
